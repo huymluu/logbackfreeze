@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property name="PATTERN_TIME"
+              value="[%thread] %-40logger{5} %-5level:   %msg%n"/>
+
+    <appender name="File" class="ch.qos.logback.core.FileAppender">
+        <file>log/common.log</file>
+        <encoder>
+            <pattern>${PATTERN_TIME}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${PATTERN_TIME}</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="File"/>
+        <appender-ref ref="Console"/>
+    </root>
+
+</configuration>

@@ -1,0 +1,18 @@
+group 'com.huy'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile group: 'ch.qos.logback', name: 'logback-core', version: '1.1.7'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
