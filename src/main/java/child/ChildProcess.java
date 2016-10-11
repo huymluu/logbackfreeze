@@ -9,11 +9,8 @@ public class ChildProcess {
     private static int count;
 
     public static void main(String[] args) {
-        LOG.info("ChildProcess start");
         while (count++ < 1000) {
-            LOG.info("Spawn thread " + count);
-            new JustPrintLogThread().start();
+            LOG.info("Line of log #" + count);
         }
-        LOG.info("ChildProcess end");
     }
 }
